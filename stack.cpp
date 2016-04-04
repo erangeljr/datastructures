@@ -10,11 +10,23 @@ enum {EMPTY = -1, FULL = max_len - 1};
 class stack
 {
 	public:
+        
+        // Resets a stack, clearing its contents
 		void reset(stack &stk);
+        
+        //Inserts an value (double) on top of the stack 
 		void push(double, stack &stk);
+        
+        //Removes the value (double) from the top of the stack
 		double pop(stack &stk);
+        
+        //Displays the top value of the stack
 		double peek(const stack &stk);
+        
+        //Returns true if the stack if full, otherwise retrun false
 		bool full(const stack &stk);
+        
+        //Returns true if the stack is empty, otherwise return false
 		bool empty(const stack &stk);
 	private:
 		double d[max_len];
