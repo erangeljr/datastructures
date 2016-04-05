@@ -7,20 +7,26 @@ using namespace std;
 const int max_len = 5;
 enum {EMPTY = -1, FULL = max_len - 1};
 
+//An Abstract Data Type container
+//Stores a value of type double 
 class stack
 {
 	public:
         
-        // Resets a stack, clearing its contents
+        // Resets a stack
+        // sets the top of stack to EMPTY
+        //Parameter: stack
 		void reset(stack &stk);
         
-        //Inserts an value (double) on top of the stack 
+        //Inserts an value (double) on top of the stack
+        // 
 		void push(double, stack &stk);
         
         //Removes the value (double) from the top of the stack
 		double pop(stack &stk);
         
         //Displays the top value of the stack
+        //Parameter stack constant  reference 
 		double peek(const stack &stk);
         
         //Returns true if the stack if full, otherwise retrun false
